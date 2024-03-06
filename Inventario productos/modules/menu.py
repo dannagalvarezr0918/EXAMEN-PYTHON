@@ -1,4 +1,4 @@
-from modules.corefiles import clear_screen, pause_screen,readFile
+from modules.corefiles import clear_screen, pause_screen, readFile
 
 productos = {}
 
@@ -26,7 +26,7 @@ def main_menu():
         'stockmax': stockMax,
     }
 
-    inventario.get(productos).update(producto)
+    inventario.update({id:producto})
     readFile('inventario.json', inventario)
     return
     
