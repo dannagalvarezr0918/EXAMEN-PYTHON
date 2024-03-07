@@ -20,3 +20,8 @@ def checkFile(archivo:str, data):
     if(not(os.path.isfile(BASE+archivo))):
         with open (BASE+archivo, 'w') as br:
             json.dump(data, br, indent=4)
+
+def readFile(archivo: str):
+    with open(BASE+archivo, 'r') as rf:
+        inventario = json.load(rf)
+    return inventario
